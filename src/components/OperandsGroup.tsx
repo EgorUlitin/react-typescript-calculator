@@ -1,6 +1,6 @@
 import { Operand } from "./Operand";
 
-const operandScheme = [ 'AC', '÷', '×', '+', '-'];
+export const operandScheme = [ 'AC', '÷', '×', '+', '-'];
 
 export const OperandsGroups = () => {
   return <div className="containerOperands">

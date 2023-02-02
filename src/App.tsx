@@ -2,14 +2,15 @@ import './App.css';
 import { Screen } from './components/Screen';
 import { ButtonsGroup } from './components/ButtonsGroup';
 import { OperandsGroups } from './components/OperandsGroup';
+import { Wrapper } from './components/Wrapper';
 
-function App() {
+const App = () => {
   return (
-    <div className="container">
+    <Wrapper>
       <Screen />
       <ButtonsGroup />
       <OperandsGroups />
-    </div>
+    </Wrapper>
   );
 }
 
