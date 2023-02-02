@@ -1,4 +1,4 @@
-import React, { ReactNode, createContext, useContext, useEffect, useState } from "react";
+import React, { ReactNode, createContext, useContext, useState } from "react";
 
 interface ICalcState {
   number: number | string;
@@ -8,6 +8,7 @@ interface ICalcState {
   resetHandler: () => () => void;
   operandSetHandler: (operand: string) => () => void;
   resultHandler: () => void;
+  deleteLastNum: () => void;
 };
 
 type operandsFunctionTypes = {
@@ -29,6 +30,8 @@ const StateProvider = ({ children }: { children: ReactNode }) => {
     result: 0,
     operand: '',
   });
+
+  const deleteLastNum = () => setState({ ...state, number: state.number.slice(0, state.number.length - 1) });
 
   const numSetHandler = (number: number | string) => () => setState({ ...state, number: `${state.number}${number}` });
   
@@ -69,6 +72,7 @@ const StateProvider = ({ children }: { children: ReactNode }) => {
       resetHandler,
       operandSetHandler,
       resultHandler,
+      deleteLastNum,
     }}>
       {children}
     </StateContext.Provider>
