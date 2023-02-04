@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-typescript-calculator/static/css/main.d5f4024a.css",
+    "main.css": "/react-typescript-calculator/static/css/main.25e766a4.css",
     "main.js": "/react-typescript-calculator/static/js/main.f1b1cb2c.js",
     "static/js/787.3cf8f7fb.chunk.js": "/react-typescript-calculator/static/js/787.3cf8f7fb.chunk.js",
     "index.html": "/react-typescript-calculator/index.html",
-    "main.d5f4024a.css.map": "/react-typescript-calculator/static/css/main.d5f4024a.css.map",
+    "main.25e766a4.css.map": "/react-typescript-calculator/static/css/main.25e766a4.css.map",
     "main.f1b1cb2c.js.map": "/react-typescript-calculator/static/js/main.f1b1cb2c.js.map",
     "787.3cf8f7fb.chunk.js.map": "/react-typescript-calculator/static/js/787.3cf8f7fb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5f4024a.css",
+    "static/css/main.25e766a4.css",
     "static/js/main.f1b1cb2c.js"
   ]
 }
