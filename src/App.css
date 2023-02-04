@@ -28,7 +28,7 @@ body {
   font-family: var(--font);
   background: grey;
   font-weight: 300;
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .container {
@@ -107,17 +107,14 @@ body {
   background: blueviolet;
   transition: all .5s;
   user-select: none;
-}
-
-.btn:hover {
-  z-index: 10;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  transition: box-shadow .5s;
+  box-shadow: none;
 }
 
 .btn:active {
   background: #831fe0;
-  transition: background .2s;
+  z-index: 10;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: all .1s;
 }
 
 .resultBtn {
@@ -176,7 +173,7 @@ body {
   transition: all .1s;
 }
 
-.operand:hover {
+.operand:active {
   color: blueviolet;
   transition: all .1s;
   transform: scale(1.5);
@@ -192,6 +189,123 @@ body {
   cursor: pointer;
 }
 
-.clearBtn:hover {
+.clearBtn:active {
   color: #fff;
 }
+
+@media (orientation: portrait) and (max-width: 600px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
+
+  .screen {
+    order: 1;
+    height: 25%;
+  }
+
+  .btnContainer {
+    order: 3;
+
+  }
+
+  .dotBtn {
+    border-bottom-left-radius: 0px;
+  }
+
+  .containerOperands {
+    position: relative;
+    top: 0;
+    left: 0;
+    order: 2;
+    height: 15%;
+    width: 100vw;
+    flex-direction: row;
+    border-radius: 0px;
+    box-shadow: none;
+    border: 0.5px solid #191b1d;
+  }
+
+  .clearBtn {
+    background: blueviolet;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .resultBtn {
+    position: static;
+    background: none;
+    border-bottom-right-radius: 0px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    transition: all 250ms;
+  }
+  
+  .resultBtn:hover {
+    position: static;
+    transform: none;
+    transition: all 250ms;
+  }
+
+  .operand {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    z-index: 10;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: box-shadow .5s;
+  }
+
+  .btn:active {
+    background: #831fe0;
+    transition: background .2s;
+  }
+
+  .operand:hover {
+    color: blueviolet;
+    transition: all .1s;
+    transform: scale(1.5);
+  }
+
+  .clearBtn:hover {
+    color: #fff;
+  }
+}
+
+/* @media(hover: hover) and (pointer: fine) {
+  .operand:hover {
+    color: blueviolet;
+    transition: all .1s;
+    transform: scale(1.5);
+  }
+
+  .btn:hover {
+    z-index: 10;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: box-shadow .5s;
+  }
+} */
